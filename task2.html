@@ -1,0 +1,58 @@
+<form autocomplete="off">
+  <fieldset>
+    <legend>Employee Details </legend>
+
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" pattern="[A-Za-z\s]+" required>
+    <br><br>
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" minlength="5">
+    <br><br>
+
+    <label for="mobile">Mobile:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="(010|011|012|015)[0-9]{8}">
+    <br><br>
+
+    <label for="course">Courses:</label>
+    <input list="courses_list" id="course" name="course">
+    <datalist id="courses_list">
+      <option value="Web Development">
+      <option value="Data Analysis">
+      <option value="UI/UX Design">
+    </datalist>
+    <br><br>
+
+    <label for="image">Upload Image:</label>
+    <input type="file" id="image" name="image" accept=".png">
+    <br><br>
+
+    <label for="comment">Comment:</label>
+    <textarea id="comment" name="comment" required></textarea>
+    <br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+    <br><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label>
+    <br><br>
+
+    <label>Tracks:</label>
+    <input type="checkbox" id="track1" name="tracks" value="track1" checked>
+    <label for="track1">Track 1</label>
+    <input type="checkbox" id="track2" name="tracks" value="track2">
+    <label for="track2">Track 2</label>
+    <br><br>
+
+    <label for="range_val">Range:</label>
+    <input type="range" id="range_val" name="range_val" min="10" max="100">
+    <br><br>
+
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
