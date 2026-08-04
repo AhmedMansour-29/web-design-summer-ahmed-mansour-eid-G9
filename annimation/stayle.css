@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #050515 0%, #1a1a3a 50%, #4a154b 100%);
+  overflow: hidden;
+}
+
+.road {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 160px;
+  background: #151515;
+  border-top: 4px solid #ff007f;
+  box-shadow: 0 -10px 20px rgba(255, 0, 127, 0.3);
+}
+
+.road-line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 6px;
+  background: #00f2fe;
+  box-shadow: 0 0 10px #00f2fe;
+}
+
+.car-container {
+  position: absolute;
+  bottom: 40px;
+  left: -350px;
+  width: 300px;
+  animation: driveSide 5s linear infinite;
+}
+
+.car-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.8));
+}
+
+@keyframes driveSide {
+  0% {
+    left: -350px;
+  }
+  100% {
+    left: calc(100vw + 350px);
+  }
+}
